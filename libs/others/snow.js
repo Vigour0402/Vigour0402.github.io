@@ -6,7 +6,7 @@
     documentWidth   = $(document).width(),
     defaults = {
         minSize     : 10,
-        maxSize     : 20,
+        maxSize     : 25,
         newOn       : 1000,
         flakeColor  : "#AFDAEF" /* 此处可以定义雪花颜色，若要白色可以改为#FFFFFF */
     },
@@ -35,9 +35,9 @@
 })(jQuery);
 $(function(){
     $.fn.snow({ 
-        minSize: 5, /* 定义雪花最小尺寸 */
-        maxSize: 20,/* 定义雪花最大尺寸 */
-        newOn: 260  /* 定义密集程度，数字越小越密集 */
+        minSize: 8, /* 定义雪花最小尺寸 */
+        maxSize: 13,/* 定义雪花最大尺寸 */
+        newOn: 250  /* 定义密集程度，数字越小越密集 */
     });
 });
 /*样式二*/
@@ -46,8 +46,8 @@ function snowFall(snow) {
     /* 可配置属性 */
     snow = snow || {};
     this.maxFlake = snow.maxFlake || 500;   /* 最多片数 */
-    this.flakeSize = snow.flakeSize || 20;  /* 雪花形状 */
-    this.fallSpeed = snow.fallSpeed || 5;   /* 坠落速度 */
+    this.flakeSize = snow.flakeSize || 10;  /* 雪花形状 */
+    this.fallSpeed = snow.fallSpeed || 0.2;   /* 坠落速度 */
 }
 /* 兼容写法 */
 requestAnimationFrame = window.requestAnimationFrame ||
