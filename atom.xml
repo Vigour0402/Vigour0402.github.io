@@ -6,7 +6,7 @@
   <link href="http://vigour0402@github.io/atom.xml" rel="self"/>
   
   <link href="http://vigour0402@github.io/"/>
-  <updated>2021-09-07T07:04:38.227Z</updated>
+  <updated>2021-09-07T09:44:31.467Z</updated>
   <id>http://vigour0402@github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安卓学习之路（Activity篇）</title>
+    <link href="http://vigour0402@github.io/2021/09/07/an-zhuo-xue-xi-zhi-lu-activity-pian/"/>
+    <id>http://vigour0402@github.io/2021/09/07/an-zhuo-xue-xi-zhi-lu-activity-pian/</id>
+    <published>2021-09-07T09:07:54.000Z</published>
+    <updated>2021-09-07T09:44:31.467Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;1-定义&quot;&gt;&lt;a href=&quot;#1-定义&quot; class=&quot;headerlink&quot; title=&quot;1. 定义&quot;&gt;&lt;/a&gt;1. 定义&lt;/h1&gt;&lt;p&gt;Activity是一个与用户交互的接口&lt;/p&gt;
+&lt;h1 id=&quot;2-生命周期&quot;&gt;&lt;a href=&quot;#2-生命周期&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="安卓" scheme="http://vigour0402@github.io/categories/%E5%AE%89%E5%8D%93/"/>
+    
+    
+    <category term="-Activity -生命周期" scheme="http://vigour0402@github.io/tags/Activity-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>数据库系统（JDBC）</title>
