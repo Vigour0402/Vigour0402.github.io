@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="数据库系统（基础篇）, 山茶树下">
+    <meta name="keywords" content="数据库系统（JDBC）, 山茶树下">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>数据库系统（基础篇） | 山茶树下</title>
+    <title>数据库系统（JDBC） | 山茶树下</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -318,12 +318,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">数据库系统（基础篇）</h1>
+                    <h1 class="description center-align post-title">数据库系统（JDBC）</h1>
                 </div>
             </div>
         </div>
@@ -464,28 +464,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-08-26
+                    2021-09-02
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-27
+                    2021-09-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    934
+                    287
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    1 分
                 </div>
                 
 
@@ -508,85 +508,81 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="第一章-绪论"><a href="#第一章-绪论" class="headerlink" title="第一章 绪论"></a>第一章 绪论</h1><h2 id="1-1-四个基本概念"><a href="#1-1-四个基本概念" class="headerlink" title="1.1. 四个基本概念"></a>1.1. 四个基本概念</h2><p>数据（data）、数据库（DB）、数据库管理系统（DBMS）、数据库系统（DBS）。</p>
-<p>数据库管理系统（DBMS）提供：</p>
-<ul>
-<li><p><strong>数据定义语言</strong>（DDL），用户通过它可以方便地对数据库中的数据对象的组成与结构进行定义。</p>
-</li>
-<li><p><strong>数据操纵语言</strong>（DML），用户通过它操纵数据，实现对数据库的基本操作，如增删改查等。</p>
-</li>
-</ul>
-<p>数据库系统（DBS）是由数据库、数据库管理系统、应用程序和数据库管理员（DBA）组成的存储、管理、处理和维护数据的系统。</p>
-<p>数据管理技术的三个阶段：人工管理阶段、文件系统阶段、数据库系统阶段。</p>
-<h2 id="1-2-数据库系统的特点"><a href="#1-2-数据库系统的特点" class="headerlink" title="1.2. 数据库系统的特点"></a>1.2. 数据库系统的特点</h2><p>数据结构化</p>
-<p>数据共享性高、冗余度低且易扩充</p>
-<ul>
-<li>数据共享可以大大减少数据冗余，节约存储空间。数据共享还可以避免数据之间的不相容性与不一致性。</li>
-</ul>
-<p>数据独立性高</p>
-<ul>
-<li>物理独立性</li>
-<li>逻辑独立性</li>
-</ul>
-<p>数据由数据库管理系统统一管理和控制</p>
-<ul>
-<li>数据的安全性保护</li>
-<li>数据的完整性检查</li>
-<li>并发控制</li>
-<li>数据库恢复</li>
-</ul>
-<h2 id="1-3-数据模型"><a href="#1-3-数据模型" class="headerlink" title="1.3. 数据模型"></a>1.3. 数据模型</h2><p>概念模型（E-R图）</p>
-<ul>
-<li>实体（entity）</li>
-<li>属性</li>
-<li>码</li>
-<li>实体型</li>
-<li>实体集</li>
-<li>联系（relationship）：一对一、一对多、多对多</li>
-</ul>
-<p>逻辑模型</p>
-<ul>
-<li>层次模型</li>
-<li>网状模型</li>
-<li>关系模型：由关系、元组、属性、码、域、分量和关系模式组成</li>
-<li>面向对象数据模型</li>
-<li>对象关系数据模型</li>
-<li>半结构化数据模型</li>
-</ul>
-<p>物理模型：对数据最底层的抽象</p>
-<p>数据模型通常由数据结构、数据操作和数据的完整性约束三部分组成。</p>
-<p>层次和网状模型统称为格式化模型，逐渐被关系模型的数据库系统取代。</p>
-<h2 id="1-4-三级映射模式"><a href="#1-4-三级映射模式" class="headerlink" title="1.4. 三级映射模式"></a>1.4. 三级映射模式</h2><p>模式（逻辑模式）、外模式（子模式/用户模式）、内模式（存储模式）</p>
-<p>三级模式之间的两层映像：外模式/模式映像（逻辑独立性）和模式/内模式映像（物理独立性）。两层映像保证了数据库系统中数据具有较高的逻辑独立性和物理独立性。</p>
-<h1 id="第二章-关系数据库"><a href="#第二章-关系数据库" class="headerlink" title="第二章 关系数据库"></a>第二章 关系数据库</h1><h2 id="2-1-关系"><a href="#2-1-关系" class="headerlink" title="2.1. 关系"></a>2.1. 关系</h2><p>域相同数据类型的值的集合</p>
-<p>笛卡尔积：相当于各集合分量的所有组合情况</p>
-<p>关系：基本表、查询表和视图表</p>
-<h2 id="2-2-关系操作"><a href="#2-2-关系操作" class="headerlink" title="2.2. 关系操作"></a>2.2. 关系操作</h2><p>查询：选择、投影、并、差、笛卡尔积、连接、除、交</p>
-<p>插入</p>
-<p>删除</p>
-<p>修改</p>
-<h2 id="2-3-关系完整性"><a href="#2-3-关系完整性" class="headerlink" title="2.3. 关系完整性"></a>2.3. 关系完整性</h2><p>实体完整性：关系的主键唯一且非空。</p>
-<p>参照完整性：</p>
-<ul>
-<li>参照关系中含外码，被参照关系中外码是主码。 </li>
-<li>属性F是基本关系的外码且与基本关系S的主码Ks相对应。</li>
-</ul>
-<p>用户定义的完整性 </p>
-<h2 id="2-4-关系代数"><a href="#2-4-关系代数" class="headerlink" title="2.4. 关系代数"></a>2.4. 关系代数</h2><p>选择：又称为限制，一般用于查询选择满足一定条件的元组。</p>
-<p>投影：从原关系中选出某些列，取消重复的元组，组成行的关系。</p>
-<p>连接：从两个关系的笛卡尔积中选取属性间满足一定条件的元组。</p>
-<ul>
-<li>等值连接</li>
-<li>非等值连接</li>
-<li>自然连接：两个关系进行比较的分量必须是同名的属性组，并且在结果中把重复的属性列去掉。</li>
-<li>外连接：吧舍弃的悬浮元组也保留在结果关系中。<ul>
-<li>左外连接</li>
-<li>右外连接</li>
-</ul>
-</li>
-<li>除运算：相当于在关系R中去掉和关系S共同的元素</li>
-</ul>
-<h1 id="第三章-SQL"><a href="#第三章-SQL" class="headerlink" title="第三章 SQL"></a>第三章 SQL</h1><h2 id="3-1-数据定义"><a href="#3-1-数据定义" class="headerlink" title="3.1. 数据定义"></a>3.1. 数据定义</h2>
+                <h2 id="JDBC"><a href="#JDBC" class="headerlink" title="JDBC"></a>JDBC</h2><p>建表语句</p>
+<pre class="line-numbers language-sql" data-language="sql"><code class="language-sql"><span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> <span class="token punctuation">`</span>s<span class="token punctuation">`</span> <span class="token punctuation">(</span>
+    <span class="token punctuation">`</span>sno<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token punctuation">`</span>sname<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token punctuation">`</span>city<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>sno<span class="token punctuation">`</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span> <span class="token keyword">ENGINE</span><span class="token operator">=</span><span class="token keyword">InnoDB</span> <span class="token keyword">DEFAULT</span> <span class="token keyword">CHARSET</span><span class="token operator">=</span>utf8<span class="token punctuation">;</span>
+
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> <span class="token punctuation">`</span>p<span class="token punctuation">`</span> <span class="token punctuation">(</span>
+    <span class="token punctuation">`</span>pno<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token punctuation">`</span>pname<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token punctuation">`</span>color<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token punctuation">`</span>weight<span class="token punctuation">`</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token punctuation">`</span>total_count<span class="token punctuation">`</span> <span class="token keyword">tinyint</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>pno<span class="token punctuation">`</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span> <span class="token keyword">ENGINE</span><span class="token operator">=</span><span class="token keyword">InnoDB</span> <span class="token keyword">DEFAULT</span> <span class="token keyword">CHARSET</span><span class="token operator">=</span>utf8<span class="token punctuation">;</span>
+
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> <span class="token punctuation">`</span>j<span class="token punctuation">`</span> <span class="token punctuation">(</span>
+    <span class="token punctuation">`</span>jno<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token punctuation">`</span>jname<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token punctuation">`</span>city<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">255</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>jno<span class="token punctuation">`</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span> <span class="token keyword">ENGINE</span><span class="token operator">=</span><span class="token keyword">InnoDB</span> <span class="token keyword">DEFAULT</span> <span class="token keyword">CHARSET</span><span class="token operator">=</span>utf8<span class="token punctuation">;</span>
+
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> <span class="token punctuation">`</span>spj<span class="token punctuation">`</span> <span class="token punctuation">(</span>
+    <span class="token punctuation">`</span>sno<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token punctuation">`</span>pno<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token punctuation">`</span>jno<span class="token punctuation">`</span> <span class="token keyword">varchar</span><span class="token punctuation">(</span><span class="token number">32</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token punctuation">`</span>qty<span class="token punctuation">`</span> <span class="token keyword">int</span><span class="token punctuation">(</span><span class="token number">11</span><span class="token punctuation">)</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">,</span>
+    <span class="token keyword">PRIMARY</span> <span class="token keyword">KEY</span> <span class="token punctuation">(</span><span class="token punctuation">`</span>sno<span class="token punctuation">`</span><span class="token punctuation">,</span><span class="token punctuation">`</span>pno<span class="token punctuation">`</span><span class="token punctuation">,</span><span class="token punctuation">`</span>jno<span class="token punctuation">`</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span> <span class="token keyword">ENGINE</span><span class="token operator">=</span><span class="token keyword">InnoDB</span> <span class="token keyword">DEFAULT</span> <span class="token keyword">CHARSET</span><span class="token operator">=</span>utf8<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>数据库连接 DBUtil.java</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">DBUtil</span> <span class="token punctuation">{</span>
+	<span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> jdbcUrl<span class="token operator">=</span><span class="token string">"jdbc:mysql://localhost:3306/booklib"</span><span class="token punctuation">;</span>
+	peivate <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> dbUser<span class="token operator">=</span><span class="token string">"root"</span><span class="token punctuation">;</span>
+	<span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">final</span> <span class="token class-name">String</span> dbPwd<span class="token operator">=</span><span class="token string">"123456"</span>
+	<span class="token keyword">static</span> <span class="token punctuation">{</span>
+		<span class="token keyword">try</span> <span class="token punctuation">{</span>
+			<span class="token class-name">Class</span><span class="token punctuation">.</span><span class="token function">forName</span><span class="token punctuation">(</span><span class="token string">"com.mysql.jdbc.Driver"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span> <span class="token keyword">catch</span><span class="token punctuation">(</span><span class="token class-name">ClassNotFoundException</span> e<span class="token punctuation">)</span><span class="token punctuation">{</span>
+			e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span>
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token class-name">Connection</span> <span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span>SQLException</span> <span class="token punctuation">{</span>
+		<span class="token keyword">return</span> <span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span>DriverManager</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span>jdbcUrl<span class="token punctuation">,</span> dbUser<span class="token punctuation">,</span> dbPwd<span class="token punctuation">)</span><span class="token punctuation">;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>根据零件编号提取零件完整信息</p>
+<pre class="line-numbers language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token class-name">BeanP</span> <span class="token function">m001LoadP</span><span class="token punctuation">(</span><span class="token class-name">String</span> pno<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token class-name">Connection</span> conn <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+    <span class="token keyword">try</span> <span class="token punctuation">{</span>
+        conn <span class="token operator">=</span> <span class="token class-name">DBUtil</span><span class="token punctuation">.</span><span class="token function">getConnection</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">//建立连接对象</span>
+        <span class="token class-name">String</span> sql <span class="token operator">=</span> <span class="token string">"select * from p where pno = ?"</span><span class="token punctuation">;</span> <span class="token comment">//sql语句</span>
+        <span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span>PreparedStatement</span> pst <span class="token operator">=</span> conn<span class="token punctuation">.</span><span class="token function">prepareStatement</span><span class="token punctuation">(</span>sql<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        pst<span class="token punctuation">.</span><span class="token function">setString</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> pno<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token class-name"><span class="token namespace">java<span class="token punctuation">.</span>sql<span class="token punctuation">.</span></span>ResultSet</span> rs <span class="token operator">=</span> pst<span class="token punctuation">.</span><span class="token function">excuteQuery</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>rs<span class="token punctuation">.</span><span class="token function">next</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token class-name">BeanP</span> p <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">BeanP</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            p<span class="token punctuation">.</span><span class="token function">setPno</span><span class="token punctuation">(</span>rs<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            p<span class="token punctuation">.</span><span class="token function">setPname</span><span class="token punctuation">(</span>rs<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            p<span class="token punctuation">.</span><span class="token function">setColor</span><span class="token punctuation">(</span>rs<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            p<span class="token punctuation">.</span><span class="token function">setWeight</span><span class="token punctuation">(</span>rs<span class="token punctuation">.</span><span class="token function">getString</span><span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            p<span class="token punctuation">.</span><span class="token function">setTotal_count</span><span class="token punctuation">(</span>rs<span class="token punctuation">.</span><span class="token function">getInt</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            <span class="token keyword">return</span> p<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token keyword">catch</span> <span class="token punctuation">(</span><span class="token class-name">SQLException</span> e<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        e<span class="token punctuation">.</span><span class="token function">printStackTrace</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">return</span> result<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
                 
             </div>
             <hr/>
@@ -612,7 +608,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://vigour0402@github.io/2021/08/26/shu-ju-ku-xi-tong-ji-chu-pian/">http://vigour0402@github.io/2021/08/26/shu-ju-ku-xi-tong-ji-chu-pian/</a>
+                    <a href="http://vigour0402@github.io/2021/09/02/shu-ju-ku-xi-tong-jdbc/">http://vigour0402@github.io/2021/09/02/shu-ju-ku-xi-tong-jdbc/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -748,9 +744,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/09/02/shu-ju-ku-xi-tong-jdbc/">
                     <div class="card-image">
@@ -768,9 +765,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -783,6 +780,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -798,7 +796,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2021/08/26/shu-ju-ku-xi-tong-ji-chu-pian/">
@@ -832,7 +830,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
